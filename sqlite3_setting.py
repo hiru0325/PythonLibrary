@@ -4,7 +4,7 @@ import common_const
 class DB_Operation:
 
     # ----- テーブル作成 -----
-    def sqlitef3_DBCreate(strDBFileName, strTableName):
+    def sqlitef3_DBCreate(self, strDBFileName, strTableName):
         
         # ----- 初期化 -----
         __conDB = None
@@ -50,7 +50,7 @@ class DB_Operation:
                 __conDB.close()
 
     # ----- SELECT -----
-    def sqlite3_DBSelect(strSQL):
+    def sqlite3_DBSelect(self, strSQL):
 
         # ----- 初期化 -----
         __conDB = None
@@ -73,7 +73,7 @@ class DB_Operation:
                 __conDB.close()
 
     # ----- INSERT、UPDATE、DELETE -----
-    def sqlite3_DBExecute(strDBfileName, strSQL):
+    def sqlite3_DBExecute(self, strDBfileName, strSQL):
 
         __conDB = None
         try:
