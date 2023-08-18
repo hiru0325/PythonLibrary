@@ -73,12 +73,12 @@ class DB_Operation:
                 __conDB.close()
 
     # ----- INSERT、UPDATE、DELETE -----
-    def sqlite3_DBExecute(strSQL):
+    def sqlite3_DBExecute(strDBfileName, strSQL):
 
         __conDB = None
         try:
             # ----- DB接続 -----
-            __conDB = sqlite3.connect(common_const.DB_FILE_NAME)
+            __conDB = sqlite3.connect(strDBfileName)
             __curDB = __conDB.cursor()
 
             # ----- SQL実行 -----
